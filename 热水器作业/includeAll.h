@@ -3,6 +3,7 @@
 #include "typeAlias.h"
 
 #include "init.h"
+#include "keys.h"
 #include "isr.h"
 #include "main.h"
 #include "buzz.h"
