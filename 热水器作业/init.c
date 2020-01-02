@@ -28,6 +28,8 @@ void SysInit() {
 	P1MODH = 0xaa;
 	//P1MODL = 0xa8;		//…œ¿≠ ‰»Î
 
+  led_init();
+  KeyInit();
   //  7.3728Mhz/2 = 3686400Hz
   //  3686400Hz/3686.4 = 1000Hz = 1ms timer2 
   TH2 = (65536 - 922) / 256;
@@ -41,5 +43,26 @@ void SysInit() {
 //=============================================================================
 void VarsInit() {}
 
+void led_init(){
+        P1MODL &= P12MOD_Mask;
+	P1MODL |= P12MOD_2;
+
+	P1MODH &= P14MOD_Mask;
+	P1MODH |= P14MOD_2;
+}
+void KeyInit()
+{
+	/* key 1 */
+	P3MODH &= P34MOD_Mask;
+	P3MODH |= P34MOD_0;
+
+	/* key 2 */
+	P3MODL &= P32MOD_Mask;
+	P3MODL |= P32MOD_0;
+
+	/* key 3 */
+	P1MODH &= P17MOD_Mask;
+	P1MODH |= P17MOD_0;
+}
 
 
