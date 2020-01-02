@@ -47,10 +47,11 @@ void main() {
 		   buzzCounter=1000;
 		}
             if(D_keyValue1==keyValue2){
-			
+			buzzCounter=1000;
 			F_ledNeg1();
 		}
             if(D_keyValue1==keyValue3){
+                        buzzCounter=1000;
 			F_ledNeg2();
 		}
 } 
