@@ -13,9 +13,13 @@
 // Globle Var -----------------------------------------
 #ifdef __keys_c
 uint8_t keyValue1;
+uint8_t keyValue2;
+uint8_t keyValue3;
 
 #else
 extern uint8_t keyValue1;
+extern uint8_t keyValue2;
+extern uint8_t keyValue3;
 #endif
 
 // Action Macro: exp: #define F_getData() ------
