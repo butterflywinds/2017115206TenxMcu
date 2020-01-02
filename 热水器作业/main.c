@@ -9,7 +9,9 @@ void main() {
 	F_turnOnWDT();
 
 	P_buzz = 0;
-
+        P_ledcom=0;
+	F_ledOff1();
+	F_ledOff2();
 	delayMs(500);
 
 	while(1){
@@ -43,6 +45,13 @@ void main() {
             if (D_keyValue1==keyValue1)
 		{
 		   buzzCounter=1000;
+		}
+            if(D_keyValue1==keyValue2){
+			
+			F_ledNeg1();
+		}
+            if(D_keyValue1==keyValue3){
+			F_ledNeg2();
 		}
 } 
 //=============================================================================
