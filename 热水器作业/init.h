@@ -17,5 +17,5 @@ void SysInit();
 void VarsInit();
 void led_init();
 void KeyInit();
-
+void smg_init();
 #endif
