@@ -64,5 +64,18 @@ void KeyInit()
 	P1MODH &= P17MOD_Mask;
 	P1MODH |= P17MOD_0;
 }
-
+void smg_init(){
+  /*a 1.4 || d 1.7 */
+  P1MODH &= 0x3c;
+  P1MODH |= 0x82;
+  /*b 3.4 || c 3.5 || e 3.6*/
+  P3MODH &= 0x00;
+  P3MODH |= 0x2a;
+  /*f 1.2||dg 1.3 */
+  P1MODL &= 0x0f;
+  P1MODL |= 0xa0;
+  /*g 3.2*/
+  P3MODL &= 0xcf;
+  P3MODL |= 0x20;
+}
 
