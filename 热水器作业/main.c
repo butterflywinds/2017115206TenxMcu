@@ -1,6 +1,8 @@
 #define __main_c
 #include "includeAll.h"
-//=============================================================================
+
+bit smgval=0;
+
 void main() {
   
   SysInit();
@@ -44,7 +46,21 @@ void main() {
 	void TaskSetting(){
             if (D_keyValue1==keyValue1)
 		{
-		   buzzCounter=1000;
+		   smg_init();
+			buzzCounter=1000;
+			
+			if (smgval==0)
+			{
+				smg_double(0x3f,0x71);
+				smgval=1;
+			}else
+			{
+				
+				smg_close();
+				smgval=0;
+			}
+			KeyInit();
+			led_init();
 		}
             if(D_keyValue1==keyValue2){
 			buzzCounter=1000;
